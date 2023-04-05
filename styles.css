@@ -1,0 +1,43 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu {
+    background: blue;
+}
+
+.interface {
+    display: grid;
+    background: wheat;
+    grid-template-rows: 1fr 8fr;
+    height: 100vh;
+}
+
+.header-bar {
+    background: pink;
+}
+
+.main-interface {
+    background: lightblue;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+}
+
+.projects {
+    background: orange;
+}
+
+.ticker {
+    background: rosybrown;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}

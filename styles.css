@@ -1,43 +1,100 @@
+* > a {
+    display: inherit;
+    gap: inherit;
+    color: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    text-decoration: inherit;
+}
+
+* > a:hover {
+    color: rgba(204, 214, 233, 0.945);
+    text-decoration: underline #e1e9e8;
+}
+
 body, html {
     margin: 0px;
     padding: 0px;
-}
+    color: aliceblue;
+    
+   }
 
 .wrapper {
     display: grid;
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 1fr 5fr;
     height: 100vh;
     margin: 0px;
     padding: 0px;
 }
 
 .menu {
-    background: blue;
+    background: #57C5B6;
+    display: grid;
+    grid-template-rows: 2fr 6fr;
+    gap: 4rem;
+    /* background-size: 40px 40px;
+    background-image: radial-gradient(circle, #00000028 1px, rgba(0, 0, 0, 0) 1px); */
+}
+   
+
+.menu-point {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#menu-navbar {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr) 6fr;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+   
+    height: 1rem;
+    align-content: center;
+    
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+   
+    padding: 0.5rem;
+    font-style: oblique;
+    cursor: pointer;
+    
+   
+}
+
+#logo > img {
+  object-fit: scale-down;
+
 }
 
 .interface {
     display: grid;
-    background: wheat;
-    grid-template-rows: 1fr 8fr;
+    background: #27E1C1;
+    grid-template-rows: 1fr 6fr;
     height: 100vh;
 }
 
 .header-bar {
-    background: pink;
+    background: #0EA293;
 }
 
 .main-interface {
-    background: lightblue;
+    background: #1A5F7A;
     display: grid;
     grid-template-columns: 4fr 2fr;
 }
 
 .projects {
-    background: orange;
+    background: 2F0F5D;
 }
 
 .ticker {
-    background: rosybrown;
+    background: #159895;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }

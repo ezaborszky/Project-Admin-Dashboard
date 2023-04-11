@@ -1,10 +1,15 @@
 * > a {
     display: inherit;
-    gap: inherit;
+  
     color: inherit;
     font-style: inherit;
     font-variant: inherit;
     text-decoration: inherit;
+}
+
+body {
+    height: 100vh;
+   
 }
 
 * > a:hover {
@@ -13,7 +18,7 @@
 }
 
 * {
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -21,23 +26,26 @@ body, html {
     margin: 0px;
     padding: 0px;
     color: aliceblue;
-    
+    box-sizing: border-box  ;
    }
 
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    height: 100vh;
+    height: auto;
     margin: 0px;
     padding: 0px;
+    background: #264c70;
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
     background: #264c70;
     display: grid;
-    grid-template-rows: 1fr 6fr;
-    gap: 4rem;
-    
+    grid-template-rows: 1fr 10fr;
+    gap: 2rem;
+    height: 100vh;
     /* background-size: 40px 40px;
     background-image: radial-gradient(circle, #00000028 1px, rgba(0, 0, 0, 0) 1px); */
 }
@@ -46,22 +54,24 @@ body, html {
 .menu-point {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 2rem;
 }
 
 #menu-navbar {
     display: grid;
-    grid-template-rows: repeat(10, 1fr) 6fr;
+    flex-direction: column;
+    grid-template-rows: repeat(10, 1fr) 10fr;
     padding-left: 1rem;
     font-size: 1.5rem;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+    height: 50vh;
+    gap: 1rem
 }
 
 #logo {
    
-    height: 1rem;
+    height: auto;
     align-content: center;
     
     font-weight: 900;
@@ -85,7 +95,7 @@ body, html {
 .interface {
     display: grid;
     background: #344d9c;
-    grid-template-rows: 2fr 8fr;
+    grid-template-rows: 1fr 8fr;
     height: auto;
 }
 
@@ -103,14 +113,17 @@ body, html {
 
 .ticker {
     background: #8fcecd;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-rows: 1fr 1fr;
+     
 }
 
 .header-bar {
     display: grid;
     grid-template-rows: 1fr 2fr;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    
   
 }
 
@@ -166,6 +179,12 @@ body, html {
     width: 2.5rem;
     border-radius: 50%;
     flex: 1.5;
+    transition-duration: 600ms;
+}
+
+#profil-pic > img:hover {
+    transform:scale(150%);
+    transition-duration: 200ms;
 }
 
 .header-bar-lower {
@@ -187,12 +206,18 @@ body, html {
     height: 5rem;
     width: 5rem;
     border-radius: 50%;
+    transition-duration: 600ms;
+}
+
+.header-bar-lower-left > img:hover {
+    transform:scale(110%);
+    transition-duration: 200ms;
 }
 
 #hello {
     display: flex;
     flex-direction: column;
-    border: 1px red solid;
+    
 }
 
 
@@ -235,6 +260,7 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1.5rem;
+   
 }
 
 .card {
@@ -246,6 +272,7 @@ button:hover {
     padding: 1rem;
     border-left: solid salmon 10px;
     border-radius: 10px;
+   
     
 }
 
@@ -261,4 +288,65 @@ button:hover {
 .card-icons {
     display: grid;
     grid-template-columns: 10fr 1fr 1fr 1fr;
+}
+
+.announcements {
+    height: auto;
+    padding: 1rem;
+    color: #264c70;
+}
+
+.trending {
+    padding: 1rem;
+    color: #264c70;
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    gap: 0.5rem;
+    color: #264c70;
+    align-items: center;
+}
+
+.trending-grid > div > img {
+    border-radius: 50%;
+}
+
+.announcements-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+ 
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2em;
+    background: white;
+    
+}
+
+
+
+.trending-grid > div > h2, p {
+    padding: 0px;
+    margin: 1px;
+    
+}
+
+.trending-grid > div > p {
+  color: #2f4357ab;
+    
+}
+
+.trending-grid > div > h2 {
+    font-size: 1.5rem;
+}
+
+.announcements-grid > div {
+    font-size: 1rem;
+    color: #264c70;
+    
 }
